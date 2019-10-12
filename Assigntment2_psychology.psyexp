@@ -6,7 +6,7 @@
     <Param name="Completed URL" updates="None" val="" valType="str"/>
     <Param name="Data filename" updates="None" val="u'data/%s_%s_%s' % (expInfo['participant'], expName, expInfo['date'])" valType="code"/>
     <Param name="Enable Escape" updates="None" val="True" valType="bool"/>
-    <Param name="Experiment info" updates="None" val="{'participant': '', 'Session': '001'}" valType="code"/>
+    <Param name="Experiment info" updates="None" val="{'participant': ''}" valType="code"/>
     <Param name="Force stereo" updates="None" val="False" valType="bool"/>
     <Param name="Full-screen window" updates="None" val="True" valType="bool"/>
     <Param name="HTML path" updates="None" val="html" valType="str"/>
@@ -14,10 +14,10 @@
     <Param name="JS libs" updates="None" val="packaged" valType="str"/>
     <Param name="Monitor" updates="None" val="testMonitor" valType="str"/>
     <Param name="Save csv file" updates="None" val="True" valType="bool"/>
-    <Param name="Save excel file" updates="None" val="True" valType="bool"/>
-    <Param name="Save log file" updates="None" val="False" valType="bool"/>
+    <Param name="Save excel file" updates="None" val="False" valType="bool"/>
+    <Param name="Save log file" updates="None" val="True" valType="bool"/>
     <Param name="Save psydat file" updates="None" val="True" valType="bool"/>
-    <Param name="Save wide csv file" updates="None" val="False" valType="bool"/>
+    <Param name="Save wide csv file" updates="None" val="True" valType="bool"/>
     <Param name="Screen" updates="None" val="1" valType="num"/>
     <Param name="Show info dlg" updates="None" val="True" valType="bool"/>
     <Param name="Show mouse" updates="None" val="False" valType="bool"/>
@@ -29,7 +29,7 @@
     <Param name="colorSpace" updates="None" val="hsv" valType="str"/>
     <Param name="expName" updates="None" val="Assignment2_psychology" valType="str"/>
     <Param name="exportHTML" updates="None" val="on Sync" valType="str"/>
-    <Param name="logging level" updates="None" val="exp" valType="code"/>
+    <Param name="logging level" updates="None" val="data" valType="code"/>
   </Settings>
   <Routines>
     <Routine name="Thankyou">
@@ -531,9 +531,9 @@
       <Param name="conditions" updates="None" val="[OrderedDict([('Pos_highlight_exo', [-6, 0]), ('Pos_cue_exo', [-6, 0]), ('correctresp_exo', '&quot;left&quot;'), ('Image_arrows', None), ('Pos_highlight_endo', [-6, 0]), ('correctresp_endo', '&quot;left&quot;')]), OrderedDict([('Pos_highlight_exo', [6, 0]), ('Pos_cue_exo', [6, 0]), ('correctresp_exo', '&quot;right&quot;'), ('Image_arrows', None), ('Pos_highlight_endo', [6, 0]), ('correctresp_endo', '&quot;right&quot;')]), OrderedDict([('Pos_highlight_exo', [-6, 0]), ('Pos_cue_exo', [-6, 0]), ('correctresp_exo', '&quot;left&quot;'), ('Image_arrows', None), ('Pos_highlight_endo', [-6, 0]), ('correctresp_endo', '&quot;left&quot;')]), OrderedDict([('Pos_highlight_exo', [6, 0]), ('Pos_cue_exo', [6, 0]), ('correctresp_exo', 'right'), ('Image_arrows', None), ('Pos_highlight_endo', [6, 0]), ('correctresp_endo', 'right')]), OrderedDict([('Pos_highlight_exo', [-6, 0]), ('Pos_cue_exo', [-6, 0]), ('correctresp_exo', '&quot;left&quot;'), ('Image_arrows', None), ('Pos_highlight_endo', [-6, 0]), ('correctresp_endo', '&quot;left&quot;')]), OrderedDict([('Pos_highlight_exo', [6, 0]), ('Pos_cue_exo', [6, 0]), ('correctresp_exo', 'right'), ('Image_arrows', None), ('Pos_highlight_endo', [6, 0]), ('correctresp_endo', 'right')]), OrderedDict([('Pos_highlight_exo', [6, 0]), ('Pos_cue_exo', [-6, 0]), ('correctresp_exo', '&quot;left&quot;'), ('Image_arrows', None), ('Pos_highlight_endo', [6, 0]), ('correctresp_endo', '&quot;left&quot;')]), OrderedDict([('Pos_highlight_exo', [-6, 0]), ('Pos_cue_exo', [6, 0]), ('correctresp_exo', 'right'), ('Image_arrows', None), ('Pos_highlight_endo', [-6, 0]), ('correctresp_endo', 'right')]), OrderedDict([('Pos_highlight_exo', [-6, 0]), ('Pos_cue_exo', [6, 0]), ('correctresp_exo', 'right'), ('Image_arrows', None), ('Pos_highlight_endo', [-6, 0]), ('correctresp_endo', 'right')])]" valType="str"/>
       <Param name="conditionsFile" updates="None" val="experiment.xlsx" valType="str"/>
       <Param name="endPoints" updates="None" val="[0, 1]" valType="num"/>
-      <Param name="isTrials" updates="None" val="False" valType="bool"/>
+      <Param name="isTrials" updates="None" val="True" valType="bool"/>
       <Param name="loopType" updates="None" val="random" valType="str"/>
-      <Param name="nReps" updates="None" val="4" valType="code"/>
+      <Param name="nReps" updates="None" val="2" valType="code"/>
       <Param name="name" updates="None" val="trials" valType="code"/>
       <Param name="random seed" updates="None" val="" valType="code"/>
     </LoopInitiator>
@@ -548,7 +548,7 @@
       <Param name="endPoints" updates="None" val="[0, 1]" valType="num"/>
       <Param name="isTrials" updates="None" val="True" valType="bool"/>
       <Param name="loopType" updates="None" val="random" valType="str"/>
-      <Param name="nReps" updates="None" val="4" valType="code"/>
+      <Param name="nReps" updates="None" val="2" valType="code"/>
       <Param name="name" updates="None" val="trials_2" valType="code"/>
       <Param name="random seed" updates="None" val="" valType="code"/>
     </LoopInitiator>
