@@ -2,7 +2,7 @@
 # -*- coding: utf-8 -*-
 """
 This experiment was created using PsychoPy3 Experiment Builder (v3.2.3),
-    on October 09, 2019, at 13:47
+    on October 12, 2019, at 18:01
 If you publish work using this script the most relevant publication is:
 
     Peirce J, Gray JR, Simpson S, MacAskill M, Höchenberger R, Sogo H, Kastman E, Lindeløv JK. (2019) 
@@ -35,7 +35,7 @@ os.chdir(_thisDir)
 # Store info about the experiment session
 psychopyVersion = '3.2.3'
 expName = 'Assignment2_psychology'  # from the Builder filename that created this script
-expInfo = {'participant': '', 'Session': '001'}
+expInfo = {'participant': ''}
 dlg = gui.DlgFromDict(dictionary=expInfo, sortKeys=False, title=expName)
 if dlg.OK == False:
     core.quit()  # user pressed cancel
@@ -50,8 +50,10 @@ filename = _thisDir + os.sep + u'data/%s_%s_%s' % (expInfo['participant'], expNa
 thisExp = data.ExperimentHandler(name=expName, version='',
     extraInfo=expInfo, runtimeInfo=None,
     originPath='C:\\Users\\ruhma\\Desktop\\psych\\Assigntment2_psychology_lastrun.py',
-    savePickle=True, saveWideText=False,
+    savePickle=True, saveWideText=True,
     dataFileName=filename)
+# save a log file for detail verbose info
+logFile = logging.LogFile(filename+'.log', level=logging.DATA)
 logging.console.setLevel(logging.WARNING)  # this outputs to the screen, not a file
 
 endExpNow = False  # flag for 'escape' or other condition => quit the exp
@@ -421,7 +423,7 @@ thisExp.nextEntry()
 routineTimer.reset()
 
 # set up handler to look after randomisation of conditions etc
-trials = data.TrialHandler(nReps=4, method='random', 
+trials = data.TrialHandler(nReps=2, method='random', 
     extraInfo=expInfo, originPath=-1,
     trialList=data.importConditions('experiment.xlsx'),
     seed=None, name='trials')
@@ -707,8 +709,19 @@ for thisTrial in trials:
             thisComponent.setAutoDraw(False)
     trials.addData('Fixation.started', Fixation.tStartRefresh)
     trials.addData('Fixation.stopped', Fixation.tStopRefresh)
-# completed 4 repeats of 'trials'
+    thisExp.nextEntry()
+    
+# completed 2 repeats of 'trials'
 
+# get names of stimulus parameters
+if trials.trialList in ([], [None], None):
+    params = []
+else:
+    params = trials.trialList[0].keys()
+# save data for this loop
+trials.saveAsText(filename + 'trials.csv', delim=',',
+    stimOut=params,
+    dataOut=['n','all_mean','all_std', 'all_raw'])
 
 # ------Prepare to start Routine "Introduction_endo"-------
 # update component parameters for each repeat
@@ -810,7 +823,7 @@ thisExp.nextEntry()
 routineTimer.reset()
 
 # set up handler to look after randomisation of conditions etc
-trials_2 = data.TrialHandler(nReps=4, method='random', 
+trials_2 = data.TrialHandler(nReps=2, method='random', 
     extraInfo=expInfo, originPath=-1,
     trialList=data.importConditions('experiment.xlsx'),
     seed=None, name='trials_2')
@@ -1101,7 +1114,7 @@ for thisTrial_2 in trials_2:
     trials_2.addData('Fixation.stopped', Fixation.tStopRefresh)
     thisExp.nextEntry()
     
-# completed 4 repeats of 'trials_2'
+# completed 2 repeats of 'trials_2'
 
 # get names of stimulus parameters
 if trials_2.trialList in ([], [None], None):
@@ -1109,9 +1122,6 @@ if trials_2.trialList in ([], [None], None):
 else:
     params = trials_2.trialList[0].keys()
 # save data for this loop
-trials_2.saveAsExcel(filename + '.xlsx', sheetName='trials_2',
-    stimOut=params,
-    dataOut=['n','all_mean','all_std', 'all_raw'])
 trials_2.saveAsText(filename + 'trials_2.csv', delim=',',
     stimOut=params,
     dataOut=['n','all_mean','all_std', 'all_raw'])
@@ -1220,7 +1230,9 @@ routineTimer.reset()
 win.flip()
 
 # these shouldn't be strictly necessary (should auto-save)
+thisExp.saveAsWideText(filename+'.csv')
 thisExp.saveAsPickle(filename)
+logging.flush()
 # make sure everything is closed down
 thisExp.abort()  # or data files will save again on exit
 win.close()
