@@ -35,7 +35,7 @@ openpyxl==3.0.0
 pandas==0.25.1
 Pillow==6.2.0
 proglog==0.1.9
-psutil==5.6.3
+psutil==5.6.6
 PsychoPy==3.2.3
 pycparser==2.19
 pyglet==1.4.5
